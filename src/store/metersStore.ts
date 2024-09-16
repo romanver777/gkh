@@ -1,8 +1,8 @@
-import { destroy, flow, types } from 'mobx-state-tree';
+import { destroy, flow, Instance, types } from 'mobx-state-tree';
 import { MeterModel, MeterType } from './meterModel';
 import { AddressModel } from './addressModel';
 
-const MetersStore = types
+export const MetersStore = types
   .model('MetersStore', {
     meters: types.array(MeterModel),
     addresses: types.map(AddressModel),
@@ -115,5 +115,7 @@ const store = MetersStore.create({
   offset: 0,
   state: 'pending',
 });
+
+export type MetersStoreType = Instance<typeof MetersStore>;
 
 export default store;

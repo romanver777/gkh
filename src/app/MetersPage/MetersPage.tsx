@@ -1,19 +1,25 @@
 import { useEffect } from 'react';
 import MetersTable from '../../components/MetersTable/MetersTable';
 import Container from '../../components/Container/Container';
-import store from '../../store/metersStore';
-import { observer } from 'mobx-react-lite';
+import { inject, observer } from 'mobx-react';
+import { MetersStoreType } from '../../store/metersStore';
 
-const MetersPage = observer(() => {
-  useEffect(() => {
-    store.fetchMeters();
-  }, []);
+type TProps = {
+  store?: MetersStoreType;
+};
 
-  return (
-    <Container>
-      <MetersTable />
-    </Container>
-  );
-});
+const MetersPage = inject('store')(
+  observer(({ store }: TProps) => {
+    useEffect(() => {
+      store!.fetchMeters();
+    }, []);
+
+    return (
+      <Container>
+        <MetersTable />
+      </Container>
+    );
+  })
+);
 
 export default MetersPage;
