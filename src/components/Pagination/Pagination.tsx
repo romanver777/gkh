@@ -4,7 +4,7 @@ import styles from './Pagination.module.css';
 type TProps = {
   activePage: number;
   onPageClick: (page: number) => void;
-  totalPages?: number;
+  totalPages: number;
   loading: boolean;
 };
 
