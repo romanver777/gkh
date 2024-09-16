@@ -62,12 +62,12 @@ const MetersTable = inject('store')(
                     key={meter.id}
                     data={meter}
                     address={
-                      store.addresses.has(meter.area.id)
+                      store?.addresses.has(meter.area.id)
                         ? `${addresses.get(meter.area.id)?.house.address} ${addresses.get(meter.area.id)?.str_number_full}`
                         : ''
                     }
                     index={index + 1 + offset}
-                    onRemove={(id) => store.removeMeter(id)}
+                    onRemove={(id) => store?.removeMeter(id)}
                   />
                 ))}
               </tbody>
