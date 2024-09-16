@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f8f9fa;
+  place-items: center;
+  min-width: 320px;
+  height: 100vh;
+  color: #1f2939;
+  font:
+    400 14px/1 Roboto,
+    sans-serif;
+    overflow: hidden;
+}
+
+button {
+  font:
+    400 14px/1 Roboto,
+    sans-serif;
+}

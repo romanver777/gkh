@@ -1,0 +1,129 @@
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.tableContainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  max-height: 1024px;
+}
+
+.tableWrapper {
+  border: 1px solid #e0e5eb;
+  border-radius: 12px;
+  width: 100%;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.loading {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.table {
+  width: 100%;
+  height: fit-content;
+  border-collapse: collapse;
+  border-bottom: 1px solid #e0e5eb;
+  overflow: hidden;
+  position: relative;
+}
+
+.thead {
+  position: sticky;
+  display: inline-table;
+  width: 100%;
+  height: 32px;
+}
+
+.index {
+  width: 48px;
+}
+
+.type {
+  width: 120px;
+}
+
+.date {
+  width: 160px;
+}
+
+.automatic {
+  width: 128px;
+}
+
+.values {
+  width: 146px;
+}
+
+.address {
+  width: 430px;
+}
+
+.note {
+  width: 304px;
+}
+
+.last {
+  width: 64px;
+}
+
+.tbody {
+  display: block;
+  width: 100%;
+  height: calc(100vh - 160px) !important;
+  overflow-y: auto;
+  text-align: center;
+}
+
+.errorTr {
+  display: block;
+}
+.errorTd {
+  display: inline;
+  position: relative;
+  top: 10px;
+}
+
+.tbody::-webkit-scrollbar {
+  width: 4px;
+}
+
+.tbody::-webkit-scrollbar-track {
+  background: #f8f9fa;
+}
+
+.tbody::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.tbody::-webkit-scrollbar-thumb:hover {
+  background: #5e6674;
+}
+
+.table th,
+.table td {
+  padding-inline: 12px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #f0f3f7;
+  color: #697180;
+  font-size: 13px;
+}
+
+td img {
+  aspect-ratio: 1;
+  width: 16px;
+  margin-right: 8px;
+}

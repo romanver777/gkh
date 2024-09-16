@@ -1,0 +1,86 @@
+.row {
+  display: table-row;
+  background-color: #fff;
+  transition: 0.3s;
+  border-top: 1px solid #e0e5eb;
+  height: 52px;
+}
+
+.row:hover {
+  background-color: #f7f8f9;
+  transition: 0.3s;
+}
+
+.row:hover .iconButton {
+  visibility: visible;
+}
+
+.cell {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.index {
+  width: 48px;
+}
+
+.type {
+  width: 120px;
+}
+
+.date {
+  width: 160px;
+}
+
+.automatic {
+  width: 128px;
+}
+
+.values {
+  width: 146px;
+}
+
+.address {
+  width: 430px;
+}
+
+.note {
+  width: 304px;
+}
+
+.last {
+  width: 64px;
+}
+
+.img {
+  object-fit: contain;
+  object-position: center;
+}
+
+.iconButton {
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background-color: #fee3e3;
+  cursor: pointer;
+}
+
+.iconButton img {
+  width: 16px;
+  height: 16px;
+  margin-right: 0;
+}
+
+.icon {
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  width: 16px;
+  align-self: stretch;
+  margin: auto 0;
+}
