@@ -24,7 +24,7 @@ function MetersTableRow({ data, address, index, onRemove }: TProps) {
       <td className={cn(styles.cell, styles.index)}>{index}</td>
       <td className={cn(styles.cell, styles.type)}>
         <img
-          src={`/src/assets/icons/${data._type[0]}.svg`}
+          src={`./icons/${data._type[0]}.svg`}
           alt={data._type[0]}
           className={styles.img}
         />
@@ -40,13 +40,10 @@ function MetersTableRow({ data, address, index, onRemove }: TProps) {
       <td className={cn(styles.cell, styles.address)}>{address}</td>
       <td className={cn(styles.cell, styles.note)}>{data.description}</td>
       <td className={cn(styles.cell, styles.last)}>
-        <button
-          className={styles.iconButton}
-          onClick={() => onRemove(data.id)}
-        >
+        <button className={styles.iconButton} onClick={() => onRemove(data.id)}>
           <img
-            src="/src/assets/icons/trash.svg"
-            alt=""
+            src="./icons/trash.svg"
+            alt="remove"
             className={styles.icon}
             loading="lazy"
           />
